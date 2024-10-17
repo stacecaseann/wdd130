@@ -54,7 +54,7 @@ header img {
     position: relative;
     /* width:100px; */
     /* display: inline-block; */
-    margin: 1 5px
+    margin: 1px 5px
 }
 .adventure-item img {
     width: 100%;
@@ -97,7 +97,7 @@ header img {
     display: grid;
     list-style: none;
     padding: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto .25fr;
     padding: 2px;
     position: absolute;
     bottom: 0;
@@ -109,7 +109,7 @@ header img {
     width: 75px;
 }
 .hero article li{
-    align-items: right;
+    align-items: center;
     padding: 10px;
 }
 .item1 {
