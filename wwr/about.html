@@ -15,39 +15,68 @@
     <header>
         <img src="images/roundlogo.png" alt="logo">
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
+            <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <div class="hero">
             <img src="images/raftingbackground.jpg" alt="Rafting">
-            <h1>Dry Oar Whitewater Rafting</h1>
             <article>
-                <img src="images/happy_client.png" alt="Client">
-                <p>
+            <h1>Dry Oar Whitewater Rafting</h1>
+
+                <ul>
+                <li class="item1"><p>
                     We provide an exciting adventure!
-                </p>
+                </p></li>
+                <li class="item2"><img src="images/happy_client.png" alt="Client">
+                </li>
+            </ul>
             </article>
         </div>
         <section>
             <h2>History</h2>
-            <p>
-                We were founded in 2024.
+            <div class="history-flex-container">
+            <p class="history-flex-item1">
+                We were founded in 2021.
             </p>
+            <img class="history-flex-item1" src="images/history.jpg" alt="History">
+            <p class="history-flex-item2">
+                We are a family operated company that started giving river guides on the Snake River but have expanded to all over the United States.
+            </p>
+        </div>
         </section>
-        <section class="adventure">
+        <section>
             <h2>Adventure Awaits You!</h2>
-            <img src="images/rafting1.jpg" alt="Raft1">
-            <img src="images/rafting2.jpg" alt="Raft2">
-            <img src="images/rafting3.jpg" alt="Raft3">
-            <img src="images/rafting4.jpg" alt="Raft4">
-            <img src="images/rafting5.jpg" alt="Raft5">
+            <div class="adventure">
+            <figure class="adventure-item">
+                <img src="images/rafting1.jpg" alt="Raft1">
+                <figcaption>Los Dias</figcaption>
+            </figure>
+            <figure class="adventure-item">
+                <img src="images/rafting2.jpg" alt="Raft2">
+                <figcaption>Grand Canyon</figcaption>
+            </figure>
+            <figure class="adventure-item">
+                <img src="images/rafting3.jpg" alt="Raft3">
+                <figcaption>Colorado River</figcaption>
+            </figure>
+            <figure class="adventure-item">
+                <img src="images/rafting4.jpg" alt="Raft4">
+                <figcaption>Salmon River, ID</figcaption>
+            </figure>
+            <figure class="adventure-item">
+                <img src="images/rafting5.jpg" alt="Raft5">
+                <figcaption>Snake River, WY </figcaption>
+            </figure>
+        </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer-container">
         <p>
             ©2024 Dry Oar Whitewater Rafting | Stacy Yarrington
         </p>
