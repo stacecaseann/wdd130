@@ -7,7 +7,8 @@
     --accent2-color: #EBE9DC;
     --heading-font: "Anton";
     --normal-font: "Roboto";
-    --h1-font-size: 24px;
+    --h1-font-size: 28px;
+    --h2-font-size: 24px;
     --default-font: "sans-serif";
     --padding: 5px
 }
@@ -15,10 +16,10 @@
 header {
     padding: 10px;
     display: grid;
-    grid-template-columns: 200px 400px;
-    max-width: 1000px;
+    grid-template-columns: auto 1fr;
+    max-width: 100%;
     align-items: center;
-    margin: 5px;
+    margin: 5px auto;
 }
 header img {
     width: 200px;
@@ -28,9 +29,11 @@ header img {
 .navigation {
     display: flex;
     list-style:none;
+    flex-wrap: wrap;
+    text-align: left;
 }
 .navigation li {
-    flex: 1 2 100%;
+    margin-right: 20px;
 }
 
 .navigation a {
@@ -43,7 +46,52 @@ header img {
 	font-weight: 700;
 	text-decoration: underline;
 }
+body {
+    padding: var(--padding);
+    width:100%;
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+    font-family: var(--normal-font), var(--default-font);
+}
+h1 {
+    color: var(--primary-color);
+    font-family: var(--heading-font), var(--default-font);
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+h2 {
+    font-family: var(--heading-font), var(--default-font);
+    font-size: var(--h2-font-size);
+    font-weight: normal; 
+    letter-spacing: 2px;   
+    text-align: center;
+}
+p {
+    font-family: var(--normal-font), var(--default-font);
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: normal
+}
 
+footer p {
+    font-family: var(--normal-font), var(--default-font);
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: normal;
+}
+footer img {
+    width:30px;
+}
+.footer-container {
+    display:grid;
+    grid-template-columns: 2fr auto auto auto auto 1fr;
+    text-align: right;
+    padding: 20px 0;
+    gap: 10px;
+    align-items: center;
+}
+/* About Us Page */
 .adventure {
     display: flex;
     justify-content: space-between;
@@ -52,14 +100,11 @@ header img {
 .adventure-item {
     flex: 1;
     position: relative;
-    /* width:100px; */
-    /* display: inline-block; */
     margin: 1px 5px
 }
 .adventure-item img {
     width: 100%;
     height: auto;
-    /* max-height: 400px; */
     display: block;
 }
 .adventure-item figcaption{
@@ -73,7 +118,7 @@ header img {
     padding: 2px;
     font-size: 0.9em;
     box-sizing: border-box;
-    
+    transform: translateY(5px); /* Move the label text down */
 }
 .hero {
     position: relative;
@@ -144,47 +189,133 @@ header img {
     margin: 0 10px;
     text-align: left
 }
-body {
-    padding: var(--padding);
-    width:1000px;
-    color: var(--primary-color);
-}
-h1 {
-    color: var(--primary-color);
-    font-family: var(--heading-font), var(--default-font);
-    font-size: var(--h1-font-size);
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-h2 {
-    font-family: var(--heading-font), var(--default-font);
-    font-size: 16px;
-    font-weight: normal; 
-    letter-spacing: 2px;   
-    text-align: center;
-}
 
-p {
-    font-family: var(--normal-font);
-    color: var(--primary-color);
-    font-size: 14px;
-    font-weight: normal
-}
+/*Contact Us Page */
 
-footer p {
-    font-family: var(--normal-font);
-    color: var(--primary-color);
-    font-size: 12px;
-    font-weight: normal
-}
-footer img {
-    width:30px;
-}
-.footer-container {
-    display:grid;
-    grid-template-columns: 2fr auto auto auto 1fr;
-    text-align: right;
-    padding: 20px 0;
-    gap: 10px;
+.employees-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-right:10%
+}
+.employees-item {
+    /* flex: 1; */
+    position: relative;
+    margin: 10px 10px;
+}
+.employees-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+.employees-item figcaption{
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color:white;
+    padding: 2px;
+    font-size: 0.8em;
+    box-sizing: border-box;    
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: 10%;
+}
+.form-group
+{
+    margin-bottom: 15px;    
+}
+.form-group button
+{
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    font-size: 1.1em;
+    padding: 5px 5px;
+}
+.form-group button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+.form-checkbox
+{
+    display: grid;   
+    grid-template-columns: auto 1fr; 
+    align-items: center;
+    justify-content: center;
+}
+.form-checkbox:checked
+{
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+.form-checkbox label {
+    margin-left: 0.5rem; /* Space between checkbox and label */
+    font-weight: normal; /* Normal font weight for checkbox labels */
+    line-height: 1.2; /* Control vertical alignment */
+    transform: translateY(5px); /* Move the label text down */
+}
+.form-radio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-radio-item {
+    display: flex;
+    align-items: center;
+    
+}
+.form-radio-item input {
+    margin-right: 10px;
+}
+.form-radio-item label {
+    transform: translateY(5px); /* Move the label text down */
+}
+label {
+    display: block;
+    margin-bottom:.5rem;
+}
+input[type="text"],
+input[type="email"],
+textarea
+{
+    width: 100%; /* Make input and button take full width */
+    padding: 10px; /* Add padding for better appearance */
+    background-color: var(--accent2-color);
+}
+input[type="radio"] {
+    margin-left: 10px; /* Space between radio button and label */
+}
+.contact-info .map {
+    width: 100%;
+    max-width: 300px;
+}
+.contact-info {
+    margin-left: 10%;
+}
+.contact-info ul{
+    list-style: none;
+}
+.contact-info li {
+    margin-bottom: 10px;
+}
+.main-container {
+    display: flex;
+    width: 100%;
+}
+.main-container-item1 {
+    flex: 3;
+}
+.main-container-item2 {
+    flex: 1;
 }
