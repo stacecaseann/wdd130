@@ -234,12 +234,17 @@ form {
 {
     margin-bottom: 15px;    
 }
+.form-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
 .form-group button
 {
     background-color: var(--primary-color);
     color: var(--accent2-color);
     font-size: 1.1em;
     padding: 5px 5px;
+
 }
 .form-group button:hover {
     background-color: var(--secondary-color);
@@ -250,7 +255,7 @@ form {
     display: grid;   
     grid-template-columns: auto 1fr; 
     align-items: center;
-    justify-content: center;
+    text-align: right;
 }
 .form-checkbox:checked
 {
