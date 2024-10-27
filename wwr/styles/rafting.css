@@ -9,8 +9,9 @@
     --normal-font: "Roboto";
     --h1-font-size: 28px;
     --h2-font-size: 24px;
+    --h3-font-size: 20px;
     --default-font: "sans-serif";
-    --padding: 5px
+    --padding: 10px
 }
 
 header {
@@ -68,11 +69,41 @@ h2 {
     letter-spacing: 2px;   
     text-align: center;
 }
+h2 {
+    font-family: var(--heading-font), var(--default-font);
+    font-size: var(--h2-font-size);
+    font-weight: normal; 
+    letter-spacing: 2px;   
+    text-align: center;
+}
+h3 {
+    font-family: var(--heading-font), var(--default-font);
+    font-size: var(--h3-font-size);
+    font-weight: normal; 
+    letter-spacing: 2px;   
+    text-align: center;
+}
 p {
     font-family: var(--normal-font), var(--default-font);
     color: var(--primary-color);
     font-size: 14px;
-    font-weight: normal
+    font-weight: normal;
+    text-align: center;
+}
+table {
+    border: 1px solid var(--primary-color);
+}
+th, td {
+    padding: var(--padding);
+    border: 1px solid var(--primary-color);
+    text-align: center;
+}
+table tr td:first-child {
+    font-weight: bold;
+}
+.bold {
+    font-weight: bold;
+    padding: var(--padding);
 }
 
 footer p {
@@ -95,8 +126,12 @@ footer img {
 /* About Us Page */
 .adventure {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* align-content: center; */
     max-width: 1000px;
+    width: 100%;
+    margin: 2px auto;
+    /* border: 2px solid black;  */
 }
 .adventure-item {
     flex: 1;
@@ -164,31 +199,37 @@ footer img {
 .item2 {
     justify-self: left;
 }
-.history {
+.info {
     align-items:center;
 }
-.history-flex-container {
+.info-flex-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
 }
-.history-flex-container img {
+.info-flex-container img {
     flex:0 1 auto;
     height: 80px;
     width: auto;
     max-width: 100%;
+    margin: 10px;
     border: 1px black solid;
 }
-.history-flex-item1 {
+.info-flex-right-aligned {
     flex: 1;
     margin: 0 10px;
     text-align: right
 }
-.history-flex-item2 {
+.info-flex-left-aligned {
     flex: 1;
     margin: 0 10px;
     text-align: left
+}
+.info-flex-item-flex2 {
+    flex: 3;
+    margin: 0 10px;
+    text-align: left;
 }
 
 /*Contact Us Page */
@@ -318,10 +359,91 @@ input[type="radio"] {
 .main-container {
     display: flex;
     width: 100%;
+    gap: 50px;
 }
 .main-container-item1 {
     flex: 3;
 }
 .main-container-item2 {
     flex: 1;
+    margin-left: 50px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;*/
+} 
+.main-container-item-centered {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* align-content: flex-start; */
+    box-sizing: border-box;
+    padding: 20px 0;
+} 
+.main-container-item-centered h3 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Home page */
+.home-grid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr; /* Defines column layout */    
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+}
+.home-grid-side {
+    box-sizing: border-box;
+    padding: 10px;
+    grid-row: span 2;
+}
+.home-grid-item {
+    box-sizing: border-box;
+    padding: 10px;
+    align-items: center;
+}
+.home-grid img{
+    height: auto;
+    width: 300px;
+    max-width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Trips page */
+.trips-grid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.trips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Defines column layout */    
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+}
+
+.trips-grid img{
+    height: 250px;
+    width: auto;
+    max-width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
